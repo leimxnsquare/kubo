@@ -21,7 +21,7 @@
     "@gltf-transform/core": "^4.5.1",
     "@gltf-transform/extensions": "^4.5.1",
     "@gltf-transform/functions": "^4.5.1",
-    "@tailwindcss/turbopack": "^4",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -30,6 +30,7 @@
     "eslint-config-next": "16.4.5",
     "meshoptimizer": "^1.3.0",
     "playwright": "^1.65.0",
+    "postcss": "^8",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
