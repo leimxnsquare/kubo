@@ -1,0 +1,181 @@
+.home-page {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(1.25rem, 2.6vw, 3rem);
+  background: #000;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand-mark {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: #f7f7f7;
+}
+
+.brand-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.primary-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(1.25rem, 2.5vw, 3rem);
+  font-family: var(--font-geist-pixel), monospace;
+  font-size: clamp(1rem, 1.65vw, 2rem);
+  line-height: 1;
+}
+
+.primary-navigation a {
+  transition: opacity 160ms ease;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible {
+  opacity: 0.65;
+}
+
+.primary-navigation a:focus-visible,
+.brand-mark:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
+.home-hero {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: clamp(4rem, 8.5vh, 8rem);
+}
+
+.hero-title {
+  width: 100%;
+  margin: 0;
+  color: #f7f7f7;
+  font-family: var(--font-gravelads), Impact, sans-serif;
+  font-size: clamp(8rem, 38vw, 46rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.78;
+  text-align: center;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: clamp(4rem, 8vh, 8rem);
+}
+
+.hero-description,
+.hero-year {
+  margin: 0;
+  color: #f7f7f7;
+  font-family: var(--font-geist-pixel), monospace;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.hero-description {
+  max-width: 46rem;
+}
+
+.hero-year {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 1600px) {
+  .hero-title {
+    font-size: min(38vw, 46rem);
+  }
+}
+
+@media (max-width: 700px) {
+  .home-page {
+    min-height: 100svh;
+    padding: 1.25rem;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .brand-mark {
+    width: 1.65rem;
+    height: 1.65rem;
+    flex-shrink: 0;
+  }
+
+  .primary-navigation {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    font-size: clamp(0.85rem, 3.2vw, 1.1rem);
+  }
+
+  .home-hero {
+    justify-content: center;
+    padding-top: clamp(5rem, 16vh, 9rem);
+  }
+
+  .hero-title {
+    font-size: 35vw;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: clamp(5rem, 16vh, 9rem);
+  }
+
+  .hero-description {
+    font-size: clamp(1rem, 4.1vw, 1.4rem);
+    line-height: 1.05;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-year {
+    align-self: flex-end;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
